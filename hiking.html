@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hiking</title>
+    <style>
+        body {
+            background: black;
+        }
+
+           .dark {
+        background: black;
+        color: white;
+      }
+
+      .dark .container {
+        background: rgba(255, 255, 255, 0.1);
+      }
+
+      .dark a {
+        color: plum;
+      }
+
+        h1 {
+            text-align: center;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        button {
+            display: block;
+            margin: 0 auto;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: #885df1;
+            font-size: 20px;
+            border-radius: 30px;
+            padding: 10px 15px;
+            transition: all 150ms ease-in-out;
+            color: white;
+        }
+
+        button:hover {
+            background:#885df1;
+            cursor: pointer;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        footer {
+            text-align: center;
+            margin: 10px 0;
+            font-size: 18px;
+        }
+
+        .theme-button {
+            font-size: 10px;
+            background: black;
+            color: white;
+            padding: 5 8px;
+        }
+
+        .theme-button:hover {
+            color: black;
+            background: #885df1;
+        }
+
+        .into-hiking-picture {
+            border-radius: 10px;
+            transition: all 150ms ease-in-out;
+        }
+
+        .into-hiking-picture:hover {
+            filter: contrast(80%);
+            transform: scale(1.1);
+        }
+
+        .grid {
+            margin: 15px 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 20px;
+        }
+
+        .grid img {
+            width: 100%;
+            border-radius: 8px;
+            transition: all 150ms ease-in-out;
+        }
+
+        .grid img:hover {
+            transform: scale(2);
+        }
+        p{
+            font-size: large;
+        }
+    </style>
+</head>
+
+<body class="dark">
+    <button class="theme-button">CHANGE THEME</button>
+    <div class="container">
+        <h1>🥾 What is Hiking?</h1>
+        <h2>My favorite hobby🥾</h2>
+        <a href="https://en.wikipedia.org/wiki/Hiking" target="_blank">
+            <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/135/802/original/istockphoto-1468908187-1024x1024.jpg?1722080778"
+                alt="" class="into-hiking-picture" />
+        </a>
+        <div class="grid">
+            <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/135/801/original/istockphoto-1746935750-1024x1024.jpg?1722080769"
+                alt="" />
+            <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/135/800/original/istockphoto-1478017633-1024x1024.jpg?1722080759"
+                alt="" />
+            <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/135/791/original/istockphoto-1667301829-1024x1024.jpg?1722080076"
+                alt="" />
+            <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/135/788/original/istockphoto-1468908187-1024x1024.jpg?1722080021"
+                alt="" />
+        </div>
+        <p>
+            Hiking is a long, vigorous walk, usually on trails or footpaths in the
+            countryside. Walking for pleasure developed in Europe during the
+            eighteenth century.[1] Religious pilgrimages have existed much longer
+            but they involve walking long distances for a spiritual purpose
+            associated with specific religions.
+        </p>
+        📖
+        <a href="https://en.wikipedia.org/wiki/Hiking" target="_blank">Read on Wikipedia</a>
+   <br><br><br><button>GET IN TOUCH</button><br><br>
+    <footer>
+        Coded with 💜 by
+        <a href="https://www.shecodes.io/" target="_blank">Sasha </a>With HTML,CSS and JAVASCRIPT
+    </footer>
+</div>
+        <script>
+            function order (){
+                let quanty =prompt("Have you ever hiked before?");
+                let name =prompt("What is your name?");
+                let email =prompt("What is your email address??");
+                alert("Thanks " + name + "! We'll get in touch with you soon with more details. Feel to contact us if you have any questions hello@shecodes.io")
+            }
+function toggleTheme(){
+if(theme==="light"){
+theme="dark"
+document.querySelector("body").classList.add("dark")
+}else{
+    theme="light";
+    document.querySelector("body"),classList.remove("dark")
+
+}
+}
+let button = document.querySelector("#order-button")
+button.addEventListener("click", order);
+
+let theme ="dark";
+let themeButton = document.querySelector("#change-theme-button");
+themeButton.addEventListener("click", toggleTheme)
+
+
+      function changeTheme() {
+        let body = document.querySelector("body");
+
+        // body.classList.toggle("dark");
+
+        if (body.classList.contains("dark")) {
+          body.classList.remove("dark");
+        } else {
+          body.classList.add("dark");
+        }
+      }
+
+   
+    </script>
+
+</body>
+
+</html>
