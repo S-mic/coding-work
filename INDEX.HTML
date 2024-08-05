@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FINAL PROJECT</title>
+
+    <style>
+      body {
+        display: block;
+        margin: 8px;
+      }
+
+      .mainbox {
+        box-shadow: rgba(37, 39, 89, 0.08) 0px 8px 8px 0;
+        background-image: linear-gradient(to top, #eeaeca 0%, #580909 100%);
+        border-radius: 10px;
+        color: #fff;
+        width: 50%;
+        padding: 30px;
+        margin: 30px auto;
+        font-family: "Cerebri Sans", Helvetica, Arial, sans-serif;
+      }
+      .mainbox h2 {
+        text-align: center;
+      }
+
+      .mainbox h1 {
+        text-align: center;
+        font-weight: bold;
+        border: 1px solid #fff;
+        padding: 20px;
+        border-radius: 4px;
+      }
+      .mainbox img {
+        margin: 0 auto;
+        display: block;
+        border-radius: 4px;
+      }
+      .mainbox p {
+        line-height: 1.5;
+        font-size: 24px;
+      }
+      a {
+        color: #fff;
+      }
+      button:hover {
+        transition: opacity 150ms ease;
+        cursor: pointer;
+        opacity: 0.5;
+        box-shadow: 0 1px 20px rgba(0, 0, 0, 0.5);
+      }
+      button {
+        background: #580909;
+        border: none;
+        font-size: 42px;
+        border-radius: 4px;
+        text-transform: uppercase;
+        color: #fff;
+        display: block;
+        padding: 10px 20px;
+        margin: 30px auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="mainbox">
+      <h1>I love cocktails</h1>
+
+      <h2>Especially Long islands</h2>
+      <hr />
+
+      <img
+        src="https://images.unsplash.com/photo-1486947799489-3fabdd7d32a6?q=80&w=1335&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        alt=""
+        width="200"
+      />
+      <hr />
+
+      <p>
+        <strong>The Long Island iced tea</strong> or Long Island ice tea, is an
+        IBA official cocktail, typically made with
+        <em
+          >vodka, tequila, light rum, triple sec, gin, and a splash of cola.</em
+        >
+        Despite its name, the cocktail does not typically contain iced tea, but
+        is named for having the same amber hue as iced tea.[1] The drink has a
+        much higher alcohol concentration (approximately 22 percent)[2] than
+        most highball drinks due to the relatively small amount of mixer.
+      </p>
+      <br />
+      <small>
+        <a
+          href="https://en.wikipedia.org/wiki/Long_Island_iced_tea"
+          target="_blank"
+          >📖 Learn More on wikipedia</a
+        >
+      </small>
+
+      <button class="simpleButton">Try Long Island Cocktails</button>
+    </div>
+    <script>
+      document.querySelector(".simpleButton").addEventListener("click", function () {
+        let name = prompt("What is your name?");
+        if (name.length) {
+          alert(
+            "Thanks, " +
+              name +
+              " , We will be in touch. Meanwhile, try having a Long Island!"
+          );
+        } else {
+          alert("No name, no Long Island for you!");
+        }
+      });
+    </script>
+  </body>
+</html>
