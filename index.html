@@ -3,199 +3,62 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>SheCodes</title>
-    <style>
-      body {
-        font-family: Cerebri Sans, Helvetica, Arial, sans-serif;
-      }
-      section {
-        margin: 120px 0;
-      }
-      h1,
-      h2 {
-        font-weight: 900;
-        font-size: 34px;
-        line-height: 48px;
-        margin: 0;
-      }
-      h1 {
-        color: #272044;
-        text-align: center;
-      }
-      h2 {
-        text-align: center;
-        color: #885df1;
-        padding: 0 0 24px;
-      }
-      p {
-        font-size: 18px;
-        line-height: 28px;
-        font-family: PT Mono, monospace;
-        text-align: center;
-      }
-      button {
-        border-radius: 25px;
-        margin: 0 auto;
-        display: block;
-        background-color: #fff;
-        border: 1px solid #885df1;
-        color: #885df1;
-        font-size: 16px;
-        line-height: 22px;
-        padding: 16px 24px;
-        text-decoration: none;
-        transition: all 200ms ease;
-      }
-      button:hover {
-        color: #fff;
-        background: #885df1;
-      }
-    </style>
+    <link rel="stylesheet" href="style.css" />
+    <title>My Weather App</title>
   </head>
-
   <body>
-    <section>
-      <h1>
-        👩‍💻 She Codes is a Coding Workshop for Women
-      </h1>
-      <h2>
-        Access a new career in Technology
-      </h2>
-      <p>
-        She Codes teaches coding, design and management skills to women
-        <br />
-        <strong>
-          Limited amount of spots!
-        </strong>
-      </p>
-      <br />
-      <button onclick="firstName">
-        Apply Now
-      </button>
-    </section>
-    <script> 
-        //IF ELSE
-/*let age = prompt("What is your age?");
-
-if (age === "18") {
-  alert("You can apply to SheCodes");
-}
-
-if (age !== "18") {
-  alert("You can not apply to SheCodes");
-}
-
-/** let age = prompt("How old are you?");
-if (age < 18) {
-  alert("You cannot apply");
-}
-
-if (age >= 18) {
-  alert("You can apply"); //
-} */
-/*Ask for the current hour: (i.e 14)
-If it’s before 12, alert Good morning,
-If it’s after 18, Good evening
-If it's between 12 and 18 Good afternoon*/
-/*let currentHour = prompt("What is the current hour?");
-if (currentHour < 12) {
-  alert("Good morning");
-} else {
-  if (currentHour > 18) {
-    alert("Good evening");
-  } else {
-    alert("Good afternoon");
-  }
-}*/
-
-//OPERATORS
-/*Ask for "What country are you from?" in a prompt
-Alert ‘You speak Portuguese’ if you are from Brazil or Portugal
-Alert ‘You don't speak Portuguese’ otherwise
-Bonus point: make it work with brazil, BRAZIL, PORTUGAL, pORTugal etc*/
-
-/*let country = prompt("what country are you from?")
-if (country === "Brazil" && Portugal === "Portuguese") {
-  alert("You speak portugguese");
-} else {
-  alert("You are not from Portugal OR BRAZIL");
-}
-
-let country = prompt("What country are you from?");
-
-country = country.toLowerCase().trim();
-
-if (country === "brazil" || country === "portugal") {
-  alert("You speak Portuguese");
-} else {
-  alert("Learn Portuguese!");
-} */
-
-//FUNCTIONS
-/*Create a function askForCountry
-From inside the function, ask for the user's country
-Alert ‘You speak Portuguese’ if from Brazil or Portugal
-Alert ‘Go learn Portuguese!’ otherwise
-Call the function*/
-
-/*function askForCountry() {
-  let name = prompt("What's your country?");
-
-  if (name === "Portugal or Brazil") {
-    alert("Go learn portuguese!),
-    }
-};
-
-askForCountry();
-
-function askForCountry() {
-  let country = prompt("What's your country?").toLowerCase().trim();
-
-
-  if (country === "brazil" || country === "portugal") {
-    alert("You speak Portuguese! Boa pá!");
-  } else {
-    alert("Go learn Portuguese!");
-  }
-}
-askForCountry();*/
-
-//EVENTS
-/*After the user clicks on the Apply now button
-Ask for the person’s first name
-Ask for the person’s age
-If 18 or more, change the h1 to  “Hi, {Name}! Welcome to SheCodes !”
-Otherwise change the h1 to  “Sorry, {Name}! You cannot join SheCodes ”*/
-/*function firstName() {
-  let name = prompt("What's your name?").toLowerCase().trim();
- if (name === "18" || country === "portugal") {
-    alert("HI,  WELCOME TO SHECODES");
-  } else {
-    alert("SORRY, YOU CAN NOT JOIN SHECODES!");
-  }
-}
-firstName()
-
-let element = document.querySelector("#city");
-element.addEventListener("click", firstName);
-
-function apply() {
-  let firstName = prompt("What is your first name?");
-  let age = prompt("How old are you?");
-  let heading = document.querySelector("h1");
-  if (age >= 18) {
-    heading.innerHTML = "Hi " + firstName + "! Welcome to SheCodes 👩‍💻";
-  } else {
-    heading.innerHTML =
-      "Sorry " + firstName + ", you can't apply to SheCodes.";
-  }
-}
-
-let applyButton = document.querySelector("button");
-applyButton.addEventListener("click", apply);*/
-
-
-</script>
+    <div class="main-box">
+      <div class="second-div">
+        <input
+          type="city"
+          id="city"
+          required
+          autofocus
+          placeholder="Enter a city"
+        />
+        <input type="submit" value="Search" />
+      </div>
+      <h1>Paris</h1>
+      <p>Saturday 15:32, moderate rain</p>
+      <p>Humidity: <strong>87%</strong>, Wind: <strong>7.2km/h</strong></p>
+      <div>
+        <p>☀️ 14°C</p>
+        <ul>
+          <li>
+            Sun⛅
+            <br />
+            <strong>14°C</strong> - 18°C
+          </li>
+          <li>
+            Mon⛅
+            <br />
+            <strong>14°C</strong> - 18°C
+          </li>
+          <li>
+            Tue⛅
+            <br />
+            <strong>14°C</strong> - 18°C
+          </li>
+          <li>
+            Wed⛅
+            <br />
+            <strong>14°C</strong> - 18°C
+          </li>
+          <li>
+            Thur⛅
+            <br />
+            <strong>14°C</strong> - 18°C
+          </li>
+        </ul>
+      </div>
+      <footer>
+        <p>
+          This project was coded by
+          <a href="shecodes@io" target="_blank">Sasha</a> and is on
+          <a href="https://github.com/" target="_blank">GitHub</a> and hoste on
+          <a href="https://www.netlify.com/" target="_blank">Netlify</a>
+        </p>
+      </footer>
+    </div>
   </body>
 </html>
